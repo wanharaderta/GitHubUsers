@@ -98,11 +98,10 @@
 		836241D4296B0D0C005D3A01 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
-				836241D5296B0D0C005D3A01 /* GithubUsersApp.swift */,
-				836241D7296B0D0C005D3A01 /* ContentView.swift */,
-				836241D9296B0D0D005D3A01 /* Assets.xcassets */,
-				836241DE296B0D0D005D3A01 /* Persistence.swift */,
-				836241E0296B0D0D005D3A01 /* GithubUsers.xcdatamodeld */,
+				83793C8C296B0FDB004F1213 /* App */,
+				83793C8F296B102F004F1213 /* Features */,
+				83793C90296B105C004F1213 /* Components */,
+				83793C8E296B1021004F1213 /* Resources */,
 				836241DB296B0D0D005D3A01 /* Preview Content */,
 			);
 			path = GithubUsers;
@@ -131,6 +130,63 @@
 				836241F7296B0D0E005D3A01 /* GithubUsersUITestsLaunchTests.swift */,
 			);
 			path = GithubUsersUITests;
+			sourceTree = "<group>";
+		};
+		83793C8C296B0FDB004F1213 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				83793C91296B109A004F1213 /* DB */,
+				836241D7296B0D0C005D3A01 /* ContentView.swift */,
+				836241D5296B0D0C005D3A01 /* GithubUsersApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		83793C8D296B0FF4004F1213 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		83793C8E296B1021004F1213 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				836241D9296B0D0D005D3A01 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		83793C8F296B102F004F1213 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				83793C92296B10B2004F1213 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		83793C90296B105C004F1213 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				83793C8D296B0FF4004F1213 /* Base */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		83793C91296B109A004F1213 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				836241DE296B0D0D005D3A01 /* Persistence.swift */,
+				836241E0296B0D0D005D3A01 /* GithubUsers.xcdatamodeld */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		83793C92296B10B2004F1213 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
