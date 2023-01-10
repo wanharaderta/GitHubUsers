@@ -7,16 +7,16 @@
 
 import Foundation
 
-class AppInfo {
+class ApiConfig {
     
     // MARK: - API Base URL
     static var apiBaseURL: String {
         #if DEV
-        return "https://reqres.in"
+        return "https://api.github.com"
         #elseif STAGING
-        return "https://reqres.in"
+        return "https://api.github.com"
         #elseif PRODUCTION
-        return "https://reqres.in"
+        return "https://api.github.com"
         #else
         return "https://private-444444.apiary-mock.com"
         #endif

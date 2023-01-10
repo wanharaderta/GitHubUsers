@@ -17,4 +17,8 @@ struct MessageHelper {
         static let notFound : String = "No Result"
         static let serverError : String = "Internal Server Error"
     }
+    
+    struct DeviceStatus {
+        static let unknownDeviceID : String = "Device ID Not Found"
+    }
 }

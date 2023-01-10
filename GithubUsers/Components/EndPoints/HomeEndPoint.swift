@@ -16,7 +16,7 @@ enum HomeEndPoint {
 extension HomeEndPoint : TargetType {
     
     var baseURL: String {
-        return AppInfo.apiBaseURL
+        return ApiConfig.apiBaseURL
     }
 
     var path: RequestType {
@@ -24,7 +24,7 @@ extension HomeEndPoint : TargetType {
         case .login:
             return .requestPath(path: "/api/login")
         case .users:
-            return .requestPath(path: "/api/users")
+            return .requestPath(path: "/users")
         }
     }
     
@@ -50,7 +50,7 @@ extension HomeEndPoint : TargetType {
     var headers: [String : String]? {
         switch self {
         default :
-            return ["Content-Type":"application/json"]
+            return ["Content-Type": "application/json"]
         }
     }
 }

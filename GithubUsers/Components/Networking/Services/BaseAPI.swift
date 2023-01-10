@@ -14,7 +14,7 @@ class BaseAPI<T: TargetType> {
     typealias AnyPublisherResult<M> = AnyPublisher<M?, APIError>
     typealias FutureResult<M> = Future<M?, APIError>
     
-    private let networking : AFNetworking
+    let session = Session(eventMonitors: [AlamofireLogger()])
     
     /// ```
     /// Generic Base Class + Combine Concept + Future Promise
@@ -23,10 +23,6 @@ class BaseAPI<T: TargetType> {
     ///
     /// - Returns: `etc promise(.failure(.timeout)) || promise(.success(value))`.
     ///
-    
-    init(networking : AFNetworking = AFNetworking(allHostsMustBeEvaluated: true)) {
-        self.networking = networking
-    }
     
     func fetchData<M: Decodable>(target: T, responseClass: M.Type) -> AnyPublisherResult<M> {
         
@@ -38,7 +34,10 @@ class BaseAPI<T: TargetType> {
         
         return FutureResult<M> { [weak self] promise in
             
-            self?.networking.session.request(url, method: method, parameters: params.0, encoding: params.1, headers: headers, requestModifier: { $0.timeoutInterval = 20 })
+            self?.session.request(url, method: method,
+                                  parameters: params.0,
+                                  encoding: params.1, headers: headers,
+                                  requestModifier: { $0.timeoutInterval = 20 })
                 .validate(statusCode: 200..<300)
                 .responseDecodable(of: M.self) { response in
                     
