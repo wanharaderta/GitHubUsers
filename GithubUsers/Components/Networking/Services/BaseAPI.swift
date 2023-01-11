@@ -50,7 +50,7 @@ class BaseAPI<T: TargetType> {
                     case .failure(let error):
                         guard !error.isTimeout else {return promise(.failure(.timeout)) }
                         guard !error.isConnectedToTheInternet else { return promise(.failure(.noNetwork)) }
-                        return promise(.failure(.general))
+                        return promise(.failure(.decodeError(error.localizedDescription)))
                     }
                 }
         }
