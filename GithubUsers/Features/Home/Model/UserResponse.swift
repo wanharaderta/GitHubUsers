@@ -8,24 +8,23 @@
 import Foundation
 
 struct UserResponse: Decodable {
-    let login: String
-    let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url: String
-    let htmlURL: String
-    let followersURL: String
-    let followingURL: String
-    let gistsURL: String
-    let starredURL: String
-    let subscriptionsURL: String
-    let organizationsURL: String
-    let reposURL: String
-    let eventsURL: String
-    let receivedEventsURL: String
-    let type: String
-    let siteAdmin: Bool
+    var login: String?? = ""
+    let id: Int?
+    var nodeID: String?? = ""
+    var avatarURL: String?? = ""
+    var gravatarID: String?? = ""
+    var url: String?? = ""
+    var htmlURL: String?? = ""
+    var followersURL: String?? = ""
+    var followingURL: String?? = ""
+    var gistsURL: String?? = ""
+    let subscriptionsURL: String?? = ""
+    let organizationsURL: String?? = ""
+    let reposURL: String?? = ""
+    let eventsURL: String?? = ""
+    let receivedEventsURL: String?? = ""
+    let type: String?? = ""
+    let siteAdmin: Bool?? = false
 }
 
 extension UserResponse {
@@ -40,6 +39,5 @@ extension UserResponse {
         case followersURL = "followers_url"
         case followingURL = "following_url"
         case gistsURL = "gists_url"
-        case starredURL = "starred_
     }
 }

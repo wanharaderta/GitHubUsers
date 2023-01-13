@@ -6,3 +6,22 @@
 //
 
 import Foundation
+import Combine
+
+typealias homeViewModel = ViewModelBaseProtocol & HomeViewModelBaseProtocol
+
+protocol HomeViewModelBaseProtocol {
+    func getUserList()
+}
+
+class HomeViewModel: ObservableObject, homeViewModel {
+    
+    var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
+    var subscriber = Set<AnyCancellable>()
+    
+    func getUserList() {
+    
+    }
+    
+    
+}

@@ -14,8 +14,8 @@ enum ViewModelStatus : Equatable {
     case emptyStateHandler(title : String, isShow : Bool)
 }
 
-protocol BaseViewModelEventSource : AnyObject {
-    var loadinState : CurrentValueSubject<ViewModelStatus, Never> { get }
+protocol ViewModelBaseProtocol {
+    var loadinState : CurrentValueSubject<ViewModelStatus, Never> { get set }
     var subscriber : Set<AnyCancellable> { get }
 }
 
@@ -23,4 +23,4 @@ protocol BaseViewModelUseCase : AnyObject {
     func callWithProgress<ReturnType>(argument: AnyPublisher<ReturnType?, APIError>, callback: @escaping (_ data: ReturnType?) -> Void)
 }
 
-typealias StandardBaseViewModel = BaseViewModelEventSource & BaseViewModelUseCase
+typealias StandardBaseViewModel = ViewModelBaseProtocol & BaseViewModelUseCase

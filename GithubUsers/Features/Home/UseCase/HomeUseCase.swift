@@ -15,6 +15,6 @@ protocol HomeUseCase: AnyObject {
 class HomeUseCaseImpl: BaseAPI<HomeEndPoint>, HomeUseCase {
     
     func getUsers() -> AnyPublisher<[UserResponse]?, APIError> {
-        self.fetchData(target: .users, responseClass: [UserResponse].self)
+       self.fetchData(target: .users, responseClass: [UserResponse].self)
     }
 }

@@ -25,6 +25,8 @@
 		8347C9EF296DACB5009D8774 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347C9EE296DACB5009D8774 /* HomeView.swift */; };
 		8347C9F3296DAEC6009D8774 /* UnidirectionalDataFlowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347C9F2296DAEC6009D8774 /* UnidirectionalDataFlowType.swift */; };
 		8347C9F5296DAEF3009D8774 /* ViewModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347C9F4296DAEF3009D8774 /* ViewModelStatus.swift */; };
+		8348C4D9297154ED00AB80BB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C4D8297154ED00AB80BB /* BaseViewModel.swift */; };
+		8348C4DB2971553700AB80BB /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C4DA2971553700AB80BB /* Scheduler.swift */; };
 		836241D6296B0D0C005D3A01 /* GithubUsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836241D5296B0D0C005D3A01 /* GithubUsersApp.swift */; };
 		836241DA296B0D0D005D3A01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836241D9296B0D0D005D3A01 /* Assets.xcassets */; };
 		836241DD296B0D0D005D3A01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836241DC296B0D0D005D3A01 /* Preview Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		8347C9EE296DACB5009D8774 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8347C9F2296DAEC6009D8774 /* UnidirectionalDataFlowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidirectionalDataFlowType.swift; sourceTree = "<group>"; };
 		8347C9F4296DAEF3009D8774 /* ViewModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelStatus.swift; sourceTree = "<group>"; };
+		8348C4D8297154ED00AB80BB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		8348C4DA2971553700AB80BB /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		836241D2296B0D0C005D3A01 /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836241D5296B0D0C005D3A01 /* GithubUsersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersApp.swift; sourceTree = "<group>"; };
 		836241D9296B0D0D005D3A01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				834543CF296C3D9A00D83037 /* MessageHelper.swift */,
+				8348C4DA2971553700AB80BB /* Scheduler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 		8347C9F0296DAE9C009D8774 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8348C4D7297154D600AB80BB /* ViewModel */,
 				833CCE0A296E885A003A05F0 /* Model */,
 				8347C9F1296DAEAF009D8774 /* Protocol */,
 			);
@@ -236,6 +242,14 @@
 				8347C9F4296DAEF3009D8774 /* ViewModelStatus.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		8348C4D7297154D600AB80BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8348C4D8297154ED00AB80BB /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		836241C9296B0D0C005D3A01 = {
@@ -500,12 +514,14 @@
 				836241E2296B0D0D005D3A01 /* GithubUsers.xcdatamodeld in Sources */,
 				836241D6296B0D0C005D3A01 /* GithubUsersApp.swift in Sources */,
 				833CCE0F296E8E16003A05F0 /* BaseResponse.swift in Sources */,
+				8348C4DB2971553700AB80BB /* Scheduler.swift in Sources */,
 				834543B9296BC6EC00D83037 /* BaseAPI.swift in Sources */,
 				834543D2296C5FB500D83037 /* AFError+Extension.swift in Sources */,
 				834543C7296C221800D83037 /* HomeEndPoint.swift in Sources */,
 				834543D6296C64DE00D83037 /* Certificates.swift in Sources */,
 				8347C9F3296DAEC6009D8774 /* UnidirectionalDataFlowType.swift in Sources */,
 				833CCE11296E90BE003A05F0 /* UserResponse.swift in Sources */,
+				8348C4D9297154ED00AB80BB /* BaseViewModel.swift in Sources */,
 				834543C1296BC7A100D83037 /* APIError.swift in Sources */,
 				834543C4296BC7E600D83037 /* BaseAPI+Extension.swift in Sources */,
 				833CCE0D296E8D69003A05F0 /* HomeUseCase.swift in Sources */,
