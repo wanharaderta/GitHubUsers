@@ -18,7 +18,7 @@ class ApiConfig {
         #elseif PRODUCTION
         return "https://api.github.com"
         #else
-        return "https://private-444444.apiary-mock.com"
+        return "https://api.github.com"
         #endif
     }
     

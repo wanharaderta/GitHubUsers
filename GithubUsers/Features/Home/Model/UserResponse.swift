@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserResponse: Decodable {
-    var login: String?? = ""
+    var login: String?
     let id: Int?
     var nodeID: String?? = ""
     var avatarURL: String?? = ""
