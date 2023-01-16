@@ -7,16 +7,15 @@
 
 import Foundation
 import Combine
+import Factory
 
-typealias homeViewModel = ViewModelBaseProtocol & HomeViewModelBaseProtocol
-
-protocol HomeViewModelBaseProtocol {
+protocol HomeViewModelBaseProtocol: ViewModelBaseProtocol {
     func getUserList()
 }
 
-class HomeViewModel: ObservableObject, homeViewModel {
+class HomeViewModel: ObservableObject, HomeViewModelBaseProtocol {
     
-    private let useCase = HomeUseCaseImpl()
+    private let useCase: HomeUseCase = Container.homeUseCaseInjected()
     
     var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
     var subscriber = Set<AnyCancellable>()
