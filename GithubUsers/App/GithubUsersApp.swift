@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct GithubUsersApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
